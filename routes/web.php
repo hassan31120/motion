@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\LinksController;
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,13 +17,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [MainController::class, 'index'])->name('main');
+Route::get('/works', [MainController::class, 'videos'])->name('videos');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'isAdmin'], function () {
     // Users

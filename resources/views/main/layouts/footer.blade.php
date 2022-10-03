@@ -13,7 +13,7 @@
                                         الان فقط ب<strong class=" text-light fw-bolder"> 192 </strong> ريال</h1>
 
                                     <div class=" col-md-12 text-center mt-3">
-                                        <a href="{{ $user->link }}" data-aos="fade-up" ata-aos-offset="300" target="_blank"
+                                        <a href="{{ $setting->link }}" data-aos="fade-up" ata-aos-offset="300" target="_blank"
                                             data-aos-delay="50" class="btn btn-success  btn-lg fw-bold" role="button">
                                             <h2 class="fw-bold">واتساب</h2>
                                         </a>

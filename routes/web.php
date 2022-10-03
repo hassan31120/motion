@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\LinksController;
+use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Auth;
@@ -53,4 +54,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'isAdmin'], function () {
      Route::get('/link/edit/{id}', [LinksController::class, 'edit'])->name('admin.link.edit');
      Route::post('/link/update/{id}', [LinksController::class, 'update'])->name('admin.link.update');
      Route::get('/link/destroy/{id}', [LinksController::class, 'destroy'])->name('admin.link.destroy');
+
+     // Settings
+    Route::get('/settings', [SettingsController::class, 'index'])->name('admin.settings');
+    Route::get('/setting/edit/{id}', [SettingsController::class, 'edit'])->name('admin.setting.edit');
+    Route::post('/setting/update/{id}', [SettingsController::class, 'update'])->name('admin.setting.update');
 });

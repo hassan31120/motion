@@ -40,7 +40,7 @@
 
     <!--section image-->
     <div class="view text-start">
-        <img src="{{ asset('main/img/i.webp') }}" class="img-fluid" alt="sample image">
+        <img src="{{ asset($setting->image) }}" class="img-fluid" alt="sample image">
     </div>
     <!--service-->
     <h1 class="text-center pt-5 mb-5 fw-bold" id="services">اعمالنا</h1>

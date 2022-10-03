@@ -21,7 +21,7 @@ class AdminMiddleware
             if (Auth::user()->userType == 1) {
                 return $next($request);
             } else {
-                return redirect(route('home'));
+                return redirect(route('main'));
             }
         } else {
             return redirect(route('login'));
